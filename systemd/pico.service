@@ -1,0 +1,14 @@
+[Unit]
+Description=Pico Automation Service
+After=network.target
+
+[Service]
+User=pi
+Group=pi
+WorkingDirectory=/home/pi/pico
+ExecStart=/home/pi/.local/bin/uv run uvicorn main:app --host 0.0.0.0 --port 8000
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

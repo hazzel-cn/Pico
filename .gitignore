@@ -1,0 +1,32 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+# Virtual environments
+.venv
+modules/
+
+# Environment Variables
+.env
+.env.local
+
+# Database & Logs
+*.db
+*.sqlite3
+logs/
+*.log
+
+# Sensitive/Temp Data
+sms_history.txt
+debug_*.py
+test_*.py
+verify_*.py
+
+# IDEs
+.vscode/
+.idea/
