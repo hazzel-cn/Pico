@@ -1,0 +1,14 @@
+[Unit]
+Description=Pico SMS Service
+After=network.target
+
+[Service]
+User=pi
+Group=pi
+WorkingDirectory=/home/pi/pico
+ExecStart=/home/pi/.local/bin/uv run python -m services.sms
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

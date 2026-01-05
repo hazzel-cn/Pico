@@ -30,3 +30,6 @@ verify_*.py
 # IDEs
 .vscode/
 .idea/
+
+data/
+config.py

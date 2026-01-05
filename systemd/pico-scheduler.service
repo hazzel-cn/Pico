@@ -1,12 +1,12 @@
 [Unit]
-Description=Pico Automation Service
+Description=Pico Scheduler Service
 After=network.target
 
 [Service]
 User=pi
 Group=pi
 WorkingDirectory=/home/pi/pico
-ExecStart=/home/pi/.local/bin/uv run uvicorn main:app --host 0.0.0.0 --port 8000
+ExecStart=/home/pi/.local/bin/uv run python -m services.scheduler
 Restart=always
 RestartSec=5
 

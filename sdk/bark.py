@@ -1,12 +1,11 @@
 import httpx
 import urllib.parse
-from core.config import settings
+import sdk.config as config
 from loguru import logger
 
 class BarkClient:
     def __init__(self, url: str = None):
-        self.url = url or settings.BARK_URL
-        # Remove trailing slash if present for consistent path building
+        self.url = url or config.BARK_URL
         if self.url and self.url.endswith("/"):
             self.url = self.url[:-1]
 
