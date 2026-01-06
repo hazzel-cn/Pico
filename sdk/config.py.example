@@ -1,0 +1,41 @@
+
+# ==========================================
+# Global SDK Configuration
+# ==========================================
+
+# Telegram Bot
+TELEGRAM_BOT_TOKEN = "your_telegram_bot_token"
+TELEGRAM_ALLOWED_USERS = [12345678, 23456789] # List of numeric Telegram IDs
+
+# AI / LLM
+# --- OpenAI ---
+OPENAI_API_KEY = "sk-..."
+OPENAI_MODEL = "gpt-4o"
+OPENAI_REASONING_EFFORT = "low" # "low", "medium", "high" for o1/o3 models
+
+# --- Google (Gemini) ---
+GOOGLE_API_KEY = "AIzaSy..."
+GOOGLE_MODEL = "gemini-2.0-flash"
+
+# --- Ollama ---
+OLLAMA_URL = "http://localhost:11434"
+OLLAMA_MODEL = "qwen2.5:7b"
+
+# AI / LLM General Settings
+DEFAULT_PROVIDER = "google" # "openai", "google", or "ollama"
+SYSTEM_PROMPT = """You are Pico, an AI assistant running on Raspberry Pi. You should call the user 老大. 
+
+You have tools available, but call them ONLY when necessary.
+
+Your responses support Markdown/HTML formatting.
+
+Be like a human."""
+
+# Notification Services
+BARK_URL = "https://bark.example.com/your_key"
+
+# --- USCIS Settings ---
+USCIS_EMAIL = "your_email@example.com"
+USCIS_PASSWORD = "your_password"
+USCIS_TOTP_SECRET = "otpauth://totp/..." # Full TOTP URI or just the secret
+USCIS_CASE_NUMBERS = ["IOE1234567890"]
