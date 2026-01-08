@@ -23,4 +23,5 @@ dependencies = [
     "curl-cffi>=0.14.0",
     "playwright>=1.57.0",
     "playwright-stealth>=2.0.0",
+    "google-generativeai>=0.8.6",
 ]
