@@ -1,0 +1,15 @@
+[Unit]
+Description=Pico Music Service - Remote Control for YTM Desktop
+After=network.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/Pico
+Environment="PATH=/home/pi/Pico/.venv/bin:/usr/local/bin:/usr/bin:/bin"
+ExecStart=/home/pi/Pico/.venv/bin/uvicorn services.pico_music.main:app --host 0.0.0.0 --port 8003
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
